@@ -1,12 +1,12 @@
 //+------------------------------------------------------------------+
-//|                                          ICT_Enumerations.mqh    |
+//|                                          AIME_Enumerations.mqh    |
 //|                              Complete Enumeration System         |
 //+------------------------------------------------------------------+
-#ifndef ICT_ENUMERATIONS_MQH
-#define ICT_ENUMERATIONS_MQH
+#ifndef AIME_ENUMERATIONS_MQH
+#define AIME_ENUMERATIONS_MQH
 
-// Primary ICT Market Structure Classification (11 States)
-enum ENUM_ICT_STRUCTURE
+// Primary AIME Market Structure Classification (11 States)
+enum ENUM_AIME_STRUCTURE
 {
    BULLISH_BOS,           // Bullish Break of Structure
    BEARISH_BOS,           // Bearish Break of Structure  
@@ -21,7 +21,7 @@ enum ENUM_ICT_STRUCTURE
    REBALANCE             // Rebalancing Phase
 };
 
-// ICT Market Phase Classification (8 Phases)
+// AIME Market Phase Classification (8 Phases)
 enum ENUM_MARKET_PHASE
 {
    ACCUMULATION_AM,       // Morning Accumulation
@@ -58,8 +58,8 @@ enum ENUM_LIQUIDITY_TYPE
    INSTITUTIONAL_REFERENCE      // Institutional Reference Point
 };
 
-// Advanced ICT Pattern Classification (26 Patterns)
-enum ENUM_ICT_PATTERN
+// Advanced AIME Pattern Classification (26 Patterns)
+enum ENUM_AIME_PATTERN
 {
    FAIR_VALUE_GAP_BULLISH,           // Bullish Fair Value Gap
    FAIR_VALUE_GAP_BEARISH,           // Bearish Fair Value Gap
@@ -89,7 +89,7 @@ enum ENUM_ICT_PATTERN
    OPTIMAL_TRADE_ENTRY              // Optimal Trade Entry
 };
 
-// ICT Killzone Classification (10 Zones)
+// AIME Killzone Classification (10 Zones)
 enum ENUM_KILLZONE
 {
    LONDON_OPEN,          // London Open (02:00-05:00 GMT)
@@ -118,4 +118,4 @@ enum ENUM_MARKET_MAKER_MODEL
    CONTINUATION_BEARISH  // Bearish Continuation Model
 };
 
-#endif // ICT_ENUMERATIONS_MQH
+#endif // AIME_ENUMERATIONS_MQH
