@@ -1,4 +1,8 @@
-## AIME (Advanced ICT Methodology Expert) is a sophisticated, modular Expert Advisor (EA) designed for MetaTrader 5 (MT5) that automates trading strategies based on the Inner Circle Trader (ICT) methodology. This project aims to provide a comprehensive, institutional-grade solution for market analysis, trade execution, and risk management, integrating advanced concepts such as market structure, fair value gaps, liquidity analysis, and various ICT-specific models.
+## AIME (Advanced ICT Methodology Expert)
+
+A sophisticated, modular Expert Advisor (EA) designed for MetaTrader 5 (MT5) that automates trading strategies based on the Inner Circle Trader (ICT) methodology. 
+
+This project aims to provide a comprehensive, institutional-grade solution for market analysis, trade execution, and risk management, integrating advanced concepts such as market structure, fair value gaps, liquidity analysis, and various ICT-specific models.
 
 ## Modular Architecture
 
