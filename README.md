@@ -1,8 +1,6 @@
-**AIME (Advanced ICT Methodology Expert) is a sophisticated, modular Expert Advisor (EA) designed for MetaTrader 5 (MT5) that automates trading strategies based on the Inner Circle Trader (ICT) methodology. This project aims to provide a comprehensive, institutional-grade solution for market analysis, trade execution, and risk management, integrating advanced concepts such as market structure, fair value gaps, liquidity analysis, and various ICT-specific models.**
+## AIME (Advanced ICT Methodology Expert) is a sophisticated, modular Expert Advisor (EA) designed for MetaTrader 5 (MT5) that automates trading strategies based on the Inner Circle Trader (ICT) methodology. This project aims to provide a comprehensive, institutional-grade solution for market analysis, trade execution, and risk management, integrating advanced concepts such as market structure, fair value gaps, liquidity analysis, and various ICT-specific models.
 
-## Features
-
-### Modular Architecture
+## Modular Architecture
 
 The EA is built with a highly modular architecture, allowing for easy expansion, maintenance, and customization. The core system is divided into several logical modules, each handling specific aspects of the trading process:
 
@@ -14,11 +12,11 @@ The EA is built with a highly modular architecture, allowing for easy expansion,
 * **Visual Modules**: Responsible for the graphical dashboard and chart object management.
 * **Performance Modules**: Tracks and reports trading performance metrics.
 
-### Key ICT Concepts Implemented
+## Key ICT Concepts Implemented
 
 AIME integrates a wide array of advanced ICT concepts to provide a robust and intelligent trading system:
 
-#### 1. Market Structure Analysis
+## 1. Market Structure Analysis
 
 This module (`AIME_MarketStructure.mqh`) is crucial for identifying the directional bias of the market. It analyzes swing points, detects significant changes in market behavior, and classifies the current market structure. Key functionalities include:
 
@@ -29,7 +27,7 @@ This module (`AIME_MarketStructure.mqh`) is crucial for identifying the directio
 * **Displacement Detection**: Identifies strong, impulsive price movements, often associated with institutional activity, using single candle, sequential, and gap-based methods.
 * **Inducement Traps**: Detects false breakouts that quickly reverse, designed to trap retail traders.
 
-#### 2. Fair Value Gaps (FVG) Analysis
+## 2. Fair Value Gaps (FVG) Analysis
 
 The `AIME_FairValueGaps.mqh` module identifies and analyzes Fair Value Gaps, which are imbalances in price delivery. These gaps often act as magnets for price or areas of potential support/resistance. Features include:
 
@@ -41,31 +39,31 @@ The `AIME_FairValueGaps.mqh` module identifies and analyzes Fair Value Gaps, whi
 * **FVG Inversion Detection**: Identifies when an FVG changes its role (e.g., from bullish support to bearish resistance) after multiple rejections.
 * **Real-time FVG Monitoring**: Continuously updates the fill percentage and activity status of existing FVGs.
 
-#### 3. Liquidity Levels Analysis
+## 3. Liquidity Levels Analysis
 
 This module (`AIME_LiquidityLevels.mqh` - focuses on identifying areas where significant liquidity is resting, often represented by equal highs/lows, swing points, or institutional reference points. These levels are prime targets for institutional algorithms.
 
-#### 4. Order Blocks (OB) Analysis
+## 4. Order Blocks (OB) Analysis
 
 This module (`AIME_OrderBlocks.mqh` - identifies Order Blocks, which are specific candles or groups of candles where large institutional orders were placed, leading to significant price movements. These often serve as strong support or resistance levels.
 
-#### 5. Premium/Discount Arrays
+## 5. Premium/Discount Arrays
 
 This concept (`AIME_PremiumDiscount.mqh` - helps determine whether the current price is trading at a premium (expensive) or discount (cheap) relative to a defined price range. This is crucial for identifying optimal entry and exit points.
 
-#### 6. Killzones and Timing
+## 6. Killzones and Timing
 
 This module (`AIME_Killzones.mqh` - identifies specific time windows during the trading day (Killzones) when institutional activity is typically highest, offering higher probability trading opportunities. It also incorporates Macro Times and Silver Bullet timings.
 
-#### 7. Multi-Asset Correlation Analysis
+## 7. Multi-Asset Correlation Analysis
 
 This module (`AIME_Correlation.mqh` -  analyzes the correlation between different assets (e.g., DXY, bonds, equities, major currencies, commodities) to provide a broader market context and identify intermarket relationships.
 
-#### 8. Market Maker Models
+## 8. Market Maker Models
 
 This module (`AIME_MarketMaker.mqh` - implements various Market Maker Models (e.g., Consolidation, Expansion, Retracement, Reversal, Continuation) to understand the likely intentions of institutional players.
 
-#### 9. Advanced ICT Strategies
+## 9. Advanced ICT Strategies
 
 The EA incorporates several specific ICT trading strategies:
 
@@ -74,7 +72,7 @@ The EA incorporates several specific ICT trading strategies:
 * **Silver Bullet**: (`AIME_SilverBullet.mqh` - *not yet analyzed, but inferred from includes*)
 * **2022 Mentorship Model**: (`AIME_2022Mentorship.mqh`)
 
-### Risk Management
+## Risk Management
 
 AIME includes a robust risk management system (`AIME_RiskManagement.mqh` - *not yet analyzed, but inferred from includes*) with configurable parameters:
 
@@ -85,7 +83,7 @@ AIME includes a robust risk management system (`AIME_RiskManagement.mqh` - *not 
 * **Emergency Exit System**: Provides a mechanism for rapid trade closure under extreme market conditions.
 * **Confluence-Based Risk Adjustment**: Adjusts risk based on the strength of confluence signals.
 
-### Visualizations and Dashboard
+## Visualizations and Dashboard
 
 The EA provides comprehensive visual feedback through a customizable dashboard (`AIME_Dashboard.mqh` - *not yet analyzed, but inferred from includes*) and chart objects (`AIME_ChartObjects.mqh` - *not yet analyzed, but inferred from includes*). Users can enable or disable the display of various ICT elements directly on the chart, including:
 
@@ -97,7 +95,7 @@ The EA provides comprehensive visual feedback through a customizable dashboard (
 * Killzone Highlights
 * Correlation Information
 
-### Input Parameters
+## Input Parameters
 
 The `AIME_InputParameters.mqh` module provides extensive customization options, categorized for clarity:
 
@@ -115,7 +113,7 @@ The `AIME_InputParameters.mqh` module provides extensive customization options, 
 The EA is developed in **MQL5**, the proprietary programming language for the MetaTrader 5 platform.
 
 
-### Data Structures
+## Data Structures
 
 The `AIME_Structures.mqh` module defines several key data structures to efficiently manage and store market analysis data:
 
@@ -126,7 +124,7 @@ The `AIME_Structures.mqh` module defines several key data structures to efficien
 * **SPowerOfThree**: Tracks the phases of the Power of Three concept (Accumulation, Manipulation, Distribution) with associated price levels and progress.
 * **SPerformanceCache**: Caches frequently accessed data like ATR, volatility, spread, RSI, MACD, EMA, Bollinger Bands, and correlation values to optimize performance.
 
-Global Variables
+## Global Variables
 
 The `AIME_GlobalVariables.mqh` module declares global variables used across different modules to maintain state and share data. These include:
 
@@ -142,7 +140,7 @@ The `AIME_GlobalVariables.mqh` module declares global variables used across diff
 * **Visual Element Management**: Arrays and counters for managing graphical objects on the chart.
 * **Error Handling and Recovery**: Variables for tracking errors and managing recovery mode.
 
-Core Calculation Utilities
+## Core Calculation Utilities
 
 The `AIME_Calculations.mqh` module provides essential mathematical and analytical functions:
 
