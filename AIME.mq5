@@ -1,68 +1,68 @@
 //+------------------------------------------------------------------+
-//|                                     ICT_Master_EA_v2025.mq5     |
+//|                                     AIME_Master_EA_v2025.mq5     |
 //|                              Code Architect for Isaiah           |
-//|                          Advanced ICT Methodology Expert         |
+//|                          Advanced AIME Methodology Expert         |
 //+------------------------------------------------------------------+
-#property copyright   "Code Architect - ICT Master System 2025"
-#property link        "Advanced ICT Methodology Implementation"
+#property copyright   "Code Architect - AIME Master System 2025"
+#property link        "Advanced AIME Methodology Implementation"
 #property version     "4.00"
 #property description "Most Advanced Inner Circle Trader Expert Advisor"
 #property description "Institutional-Grade Multi-Asset Correlation Analysis"
-#property description "Complete ICT Methodology with All Advanced Concepts"
-#property strict
+#property description "Complete AIME Methodology with All Advanced Concepts"
+#property strAIME
 
 //+------------------------------------------------------------------+
 //| MODULAR ARCHITECTURE INCLUDES                                   |
 //+------------------------------------------------------------------+
 
 // Core System Modules
-#include <ICT_System/Core/ICT_Enumerations.mqh>
-#include <ICT_System/Core/ICT_Structures.mqh>
-#include <ICT_System/Core/ICT_GlobalVariables.mqh>
-#include <ICT_System/Core/ICT_InputParameters.mqh>
+#include <AIME_System/Core/AIME_Enumerations.mqh>
+#include <AIME_System/Core/AIME_Structures.mqh>
+#include <AIME_System/Core/AIME_GlobalVariables.mqh>
+#include <AIME_System/Core/AIME_InputParameters.mqh>
 
 // Analysis Modules
-#include <ICT_System/Analysis/ICT_MarketStructure.mqh>
-#include <ICT_System/Analysis/ICT_FairValueGaps.mqh>
-#include <ICT_System/Analysis/ICT_OrderBlocks.mqh>
-#include <ICT_System/Analysis/ICT_LiquidityLevels.mqh>
-#include <ICT_System/Analysis/ICT_PowerOfThree.mqh>
-#include <ICT_System/Analysis/ICT_PremiumDiscount.mqh>
-#include <ICT_System/Analysis/ICT_Killzones.mqh>
-#include <ICT_System/Analysis/ICT_Correlation.mqh>
+#include <AIME_System/Analysis/AIME_MarketStructure.mqh>
+#include <AIME_System/Analysis/AIME_FairValueGaps.mqh>
+#include <AIME_System/Analysis/AIME_OrderBlocks.mqh>
+#include <AIME_System/Analysis/AIME_LiquidityLevels.mqh>
+#include <AIME_System/Analysis/AIME_PowerOfThree.mqh>
+#include <AIME_System/Analysis/AIME_PremiumDiscount.mqh>
+#include <AIME_System/Analysis/AIME_Killzones.mqh>
+#include <AIME_System/Analysis/AIME_Correlation.mqh>
 
 // Strategy Modules
-#include <ICT_System/Strategies/ICT_UnicornModel.mqh>
-#include <ICT_System/Strategies/ICT_DragonflyEntry.mqh>
-#include <ICT_System/Strategies/ICT_SilverBullet.mqh>
-#include <ICT_System/Strategies/ICT_2022Mentorship.mqh>
-#include <ICT_System/Strategies/ICT_MarketMaker.mqh>
+#include <AIME_System/Strategies/AIME_UnicornModel.mqh>
+#include <AIME_System/Strategies/AIME_DragonflyEntry.mqh>
+#include <AIME_System/Strategies/AIME_SilverBullet.mqh>
+#include <AIME_System/Strategies/AIME_2022Mentorship.mqh>
+#include <AIME_System/Strategies/AIME_MarketMaker.mqh>
 
 // Execution Modules
-#include <ICT_System/Execution/ICT_TradeExecution.mqh>
-#include <ICT_System/Execution/ICT_RiskManagement.mqh>
-#include <ICT_System/Execution/ICT_PositionManagement.mqh>
+#include <AIME_System/Execution/AIME_TradeExecution.mqh>
+#include <AIME_System/Execution/AIME_RiskManagement.mqh>
+#include <AIME_System/Execution/AIME_PositionManagement.mqh>
 
 // Utility Modules
-#include <ICT_System/Utils/ICT_Calculations.mqh>
-#include <ICT_System/Utils/ICT_Validation.mqh>
-#include <ICT_System/Utils/ICT_MemoryManager.mqh>
-#include <ICT_System/Utils/ICT_ErrorHandler.mqh>
+#include <AIME_System/Utils/AIME_Calculations.mqh>
+#include <AIME_System/Utils/AIME_Validation.mqh>
+#include <AIME_System/Utils/AIME_MemoryManager.mqh>
+#include <AIME_System/Utils/AIME_ErrorHandler.mqh>
 
 // Visual Modules
-#include <ICT_System/Visual/ICT_Dashboard.mqh>
-#include <ICT_System/Visual/ICT_ChartObjects.mqh>
+#include <AIME_System/Visual/AIME_Dashboard.mqh>
+#include <AIME_System/Visual/AIME_ChartObjects.mqh>
 
 // Performance Modules
-#include <ICT_System/Performance/ICT_Metrics.mqh>
-#include <ICT_System/Performance/ICT_Reporting.mqh>
+#include <AIME_System/Performance/AIME_Metrics.mqh>
+#include <AIME_System/Performance/AIME_Reporting.mqh>
 
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
 int OnInit()
 {
-   Print("=== ICT Master EA v4.00 Modular System Initialization ===");
+   Print("=== AIME Master EA v4.00 Modular System Initialization ===");
    
    // Initialize all subsystems
    if(!InitializeCore()) return INIT_FAILED;
@@ -76,7 +76,7 @@ int OnInit()
    // Set event timer for low-frequency updates
    EventSetTimer(1);
    
-   Print("=== ICT Master EA Initialization Complete ===");
+   Print("=== AIME Master EA Initialization Complete ===");
    return INIT_SUCCEEDED;
 }
 
@@ -97,7 +97,7 @@ void OnDeinit(const int reason)
    // Generate final report
    GenerateFinalReport(reason);
    
-   Print("=== ICT Master EA v4.00 Shutdown Complete ===");
+   Print("=== AIME Master EA v4.00 Shutdown Complete ===");
 }
 
 //+------------------------------------------------------------------+
@@ -110,7 +110,7 @@ void OnTick()
    if(!ValidateTradingConditions()) return;
    
    // Execute main trading logic
-   ExecuteICTTradingLogic();
+   ExecuteAIMETradingLogic();
    
    // Manage existing positions
    ManageActivePositions();
